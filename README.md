@@ -20,96 +20,80 @@ The project involves integrating AR and robotics to develop a voice-controlled r
 
 ---
 
+## Implementation Details
+
+This project demonstrates the integration of Augmented Reality (AR) with robotics for a voice-controlled robotic arm using the RealWear headset. Below are the key implementation steps:
+
+---
+
 ### 1. System Architecture
 
-The application is built around a robust architecture connecting the RealWear headset, Robot Operating System (ROS), Unity engine, and Gazebo simulation. The high-level architecture includes:
-- **Voice Command Processing**: RealWear headset captures commands and forwards them to ROS.
-- **ROS Communication**: Processes commands and translates them into robot actions.
-- **Gazebo Simulation**: Simulates the robotic arm's actions for testing and evaluation.
-- **Unity Visualization**: Provides a user-friendly AR interface for interaction.
+The system connects several components to enable seamless operation:
+- **RealWear Headset**: Captures voice commands for hands-free interaction.
+- **ROS (Robot Operating System)**: Manages communication between components and the robotic arm.
+- **Unity Engine**: Provides an AR-based user interface.
+- **Gazebo Simulation**: Simulates robotic arm actions for testing and evaluation.
+
+This setup creates a robust framework to convert voice commands into precise robotic actions while leveraging AR for user feedback.
 
 ---
 
 ### 2. Voice Command Recognition
 
-The RealWear headset is configured to recognize natural language commands, which are processed and sent to ROS for action execution.
-
-#### Key Steps:
-1. **Voice Recognition Setup**: Using RealWear's built-in APIs to process commands.
-2. **Command Parsing**: Translate spoken commands into robot actions.
-3. **ROS Integration**: Publish parsed commands to ROS topics for robot control.
+The RealWear Navigator 520 headset processes natural language commands, which are then sent to ROS. Key steps include:
+1. **Voice Input**: Commands are recognized using RealWear’s built-in APIs.
+2. **Command Translation**: Spoken inputs are mapped to predefined robotic actions.
+3. **ROS Communication**: Translates and publishes commands to the robot controller via ROS topics.
 
 ---
 
-### 3. User Interface Design for RealWear
+### 3. User Interface in Unity
 
-The RealWear headset displays visual feedback to users, showing available commands and system status. The interface is developed using Unity.
-
-#### Steps:
-- **Create a Menu in Unity**: Display command options dynamically based on system state.
-- **AR Integration**: Overlay feedback on the real-world view using Unity's AR toolkit.
+An intuitive AR-based UI was designed to enhance the user experience:
+- **Command Menu**: Dynamically displays available voice commands.
+- **AR Overlays**: Provide real-time feedback on the robot's status and actions.
 
 ---
 
 ### 4. ROS Integration
 
-The application leverages ROS for robot communication and control. Key steps include:
-- **Setting Up ROS Nodes**: Nodes were created for voice recognition, command processing, and robot control.
-- **Topic Publishing**: Commands are sent to the `robot_control` topic for execution.
-- **Motion Planning**: Using MoveIt! for trajectory generation and execution.
+ROS acts as the middleware to manage communication and motion control:
+- **ROS Nodes**: Handle command processing and robotic motion execution.
+- **Motion Planning**: Leverages MoveIt! for trajectory generation, ensuring precise and safe robotic movements.
+- **Real-Time Data Exchange**: Commands flow between Unity, ROS, and Gazebo using WebSocket communication via ROSBridge.
 
 ---
 
 ### 5. Gazebo Simulation
 
-Gazebo is used to simulate the Franka Emika robotic arm's movements. This ensures safety and precision before deployment.
-
-#### Key Steps:
-1. **Model Integration**: Add the Franka Emika robot model to the Gazebo environment.
-2. **Trajectory Visualization**: Use ROS topics to visualize planned paths in real time.
-3. **Testing Metrics**: Measure response time, accuracy, and precision during simulations.
+Gazebo simulates the Franka Emika robotic arm to ensure safe and reliable performance before real-world deployment:
+- **Model Setup**: Configured the robot and environment for accurate simulations.
+- **Testing Metrics**: Evaluated the system's accuracy, response time, and precision in a controlled setting.
 
 ---
 
-### 6. AR Visualization with Unity
+### 6. Testing and Evaluation
 
-Unity is used to provide real-time AR feedback to users through the RealWear headset. The visual interface enhances usability and situational awareness.
-
-#### Features:
-- **Command Feedback**: Displays the recognized command and system status.
-- **Simulation Overlay**: Visualize the robot's planned trajectory and current pose.
-
----
-
-### 7. Testing Protocols
-
-To evaluate the system's performance, rigorous testing was conducted using defined metrics:
-- **Command Accuracy**: Percentage of correctly recognized and executed commands.
-- **Response Latency**: Time taken from voice command to robot action.
-- **Precision**: Accuracy of the robot in achieving the desired target.
-
-#### Results:
-| Metric            | Value    |
-|--------------------|----------|
-| Command Accuracy   | 95%      |
-| Response Latency   | 0.8 sec  |
-| Precision          | ±0.5 mm  |
-
-Testing data was collected in structured scenarios to ensure reliability.
+Performance was rigorously tested based on these metrics:
+- **Command Accuracy**: Achieved 95% accuracy for correctly recognized and executed commands.
+- **Response Latency**: Measured an average response time of 0.8 seconds.
+- **Precision**: Ensured the robotic arm achieved ±0.5 mm accuracy in target positioning.
 
 ---
 
-### 8. Challenges and Solutions
+### 7. Challenges and Solutions
 
-- **Latency Issues**: Optimized communication between ROS and Gazebo to reduce delays.
-- **Command Recognition Accuracy**: Improved parsing logic to handle ambiguous commands effectively.
-- **AR Feedback Delays**: Adjusted Unity rendering pipeline for real-time feedback.
+- **Latency**: Optimized data flow between Unity and ROS to minimize delays.
+- **Command Recognition**: Improved parsing logic for higher accuracy in noisy environments.
+- **AR Feedback**: Enhanced Unity's rendering pipeline for real-time AR updates.
 
 ---
 
 ## Future Enhancements
 - **Real-World Testing**: Move from Gazebo simulation to real robotic arm testing.
 - **Expanded Command Set**: Integrate additional voice commands for complex tasks.
+
+This project highlights an innovative approach to combining AR and robotics, providing a scalable solution for hands-free and intuitive robotic control in industrial and operational environments.
 
 ---
 
