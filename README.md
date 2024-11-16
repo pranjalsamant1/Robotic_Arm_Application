@@ -14,10 +14,6 @@ This project integrates Augmented Reality (AR) with robot programming using a vo
 
 ---
 
-## Implementation Details
-
-The project involves integrating AR and robotics to develop a voice-controlled robotic arm using the RealWear headset. Below is a detailed explanation of each major component.
-
 ---
 
 ## Implementation Details
