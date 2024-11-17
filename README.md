@@ -61,10 +61,14 @@ An intuitive AR-based UI was designed to enhance the user experience:
 
 ### 4. ROS Integration
 
+![Alt text](assets/images/connection_unity_flow.png)
+
 ROS acts as the middleware to manage communication and motion control:
 - **ROS Nodes**: Handle command processing and robotic motion execution.
 - **Motion Planning**: Leverages MoveIt! for trajectory generation, ensuring precise and safe robotic movements.
 - **Real-Time Data Exchange**: Commands flow between Unity, ROS, and Gazebo using WebSocket communication via ROSBridge.
+
+![Alt text](assets/images/common_control_flow.png)
 
 ---
 
@@ -73,6 +77,10 @@ ROS acts as the middleware to manage communication and motion control:
 Gazebo simulates the Franka Emika robotic arm to ensure safe and reliable performance before real-world deployment:
 - **Model Setup**: Configured the robot and environment for accurate simulations.
 - **Testing Metrics**: Evaluated the system's accuracy, response time, and precision in a controlled setting.
+
+![Alt text](assets/images/robot_simulation.png)
+
+![Alt text](assets/images/robot_accuracy_endeffector.png)
 
 ---
 
