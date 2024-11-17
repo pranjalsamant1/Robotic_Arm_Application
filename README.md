@@ -40,6 +40,8 @@ This setup creates a robust framework to convert voice commands into precise rob
 
 ### 2. Voice Command Recognition
 
+![Alt text](assets/images/cmd_pub_flow.png)
+
 The RealWear Navigator 520 headset processes natural language commands, which are then sent to ROS. Key steps include:
 1. **Voice Input**: Commands are recognized using RealWear’s built-in APIs.
 2. **Command Translation**: Spoken inputs are mapped to predefined robotic actions.
@@ -48,6 +50,8 @@ The RealWear Navigator 520 headset processes natural language commands, which ar
 ---
 
 ### 3. User Interface in Unity
+
+![Alt text](assets/images/robot_control_scene.png)
 
 An intuitive AR-based UI was designed to enhance the user experience:
 - **Command Menu**: Dynamically displays available voice commands.
