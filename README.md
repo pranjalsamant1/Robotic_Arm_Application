@@ -24,6 +24,8 @@ This project demonstrates the integration of Augmented Reality (AR) with robotic
 
 ### 1. System Architecture
 
+![Alt text](assets/images/Slide3.jpg)
+
 The system connects several components to enable seamless operation:
 - **RealWear Headset**: Captures voice commands for hands-free interaction.
 - **ROS (Robot Operating System)**: Manages communication between components and the robotic arm.
