@@ -91,6 +91,12 @@ Performance was rigorously tested based on these metrics:
 - **Response Latency**: Measured an average response time of 0.8 seconds.
 - **Precision**: Ensured the robotic arm achieved ±0.5 mm accuracy in target positioning.
 
+![Alt text](assets/images/exel_precision.png)
+
+![Alt text](assets/images/execl_voicetest.png)
+
+![Alt text](assets/images/exel_precision.png)
+
 ---
 
 ### 7. Challenges and Solutions
