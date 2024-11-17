@@ -1,5 +1,7 @@
 # Robotic Arm Application
 
+![Alt text](assets/images/RW_headset_operator_both.png)
+
 This project integrates Augmented Reality (AR) with robot programming using a voice-controlled interface. The application enables hands-free control of a robotic arm through voice commands, enhancing accessibility and safety in industrial automation.
 
 - **Technologies Used**: ROS, Unity, Gazebo, RealWear Headset
