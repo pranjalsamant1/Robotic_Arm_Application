@@ -1,3 +1,9 @@
+<video controls width="100%">
+  <source src="Project_Files/Video/robotcontrolapp_workingvideo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 # Robotic Arm Application: Voice-Controlled AR Interface
 
 ![System overview](assets/images/RW_headset_operator_both.png)
