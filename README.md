@@ -100,15 +100,81 @@ Performance evaluation was conducted in the Gazebo simulation environment using 
 
 ---
 
-## Results
+## Results & Data Analysis
 
-![Accuracy results](assets/images/command_accuracy_exel.png)
+The system was evaluated in a **Gazebo simulation environment** using structured and repeatable test protocols.
+Performance was assessed across three key metrics: **command accuracy**, **response latency**, and **positional precision**.
+All experiments were conducted under controlled simulated conditions using a Franka Emika robotic arm model.
 
-- **Command Accuracy:** ~95%  
-- **Average Response Latency:** ~0.8 seconds  
-- **Positioning Precision:** ±0.5 mm (simulated end-effector accuracy)
+---
 
-Measurements were collected across multiple trials using predefined command sets and target positions, with results logged and analyzed using spreadsheet-based evaluation.
+### Command Accuracy
+
+The voice-controlled robotic arm demonstrated **100% command execution accuracy** across all test sequences.
+
+- **Test setup:**  
+  - 5 independent test sequences  
+  - Each sequence contained **12 distinct movement and stop commands**  
+- **Total commands tested:** 60  
+- **Successful executions:** 60 / 60  
+
+This indicates a **robust and reliable voice-command interface**, capable of consistently translating spoken commands into correct robotic actions under simulated conditions.
+
+![Command Accuracy – Test Sequences](assets/images/command_accuracy_exel.png)
+*Figure: Command accuracy across multiple test sequences (100% success rate).*
+
+---
+
+### Response Latency
+
+Response latency was defined as the **time elapsed between issuing a voice command and the robot arm initiating movement**.
+
+- **Number of trials:** 30  
+- **Average response latency:** **112.1 ms**  
+- **Standard deviation:** **159.68 ms**
+
+Latency variations are expected due to:
+- Voice recognition processing  
+- Network communication via ROSBridge (WebSocket)  
+- ROS command handling and motion planning  
+
+A downward trend in latency was observed over successive trials, suggesting **potential self-optimization effects**, such as improved network handling or caching mechanisms within the communication pipeline.
+
+![Response Latency Over Trials](assets/images/response_latency_chart.png)
+*Figure: Response latency measured across multiple trials.*
+
+---
+
+### Precision Analysis (Speed vs Accuracy)
+
+Precision was evaluated by measuring the **Euclidean distance between a fixed target position**  
+(X: 0.3, Y: 0.3, Z: 0) and the robot arm’s final end-effector position.
+
+- **Total trials:** 15  
+- **Speed categories:** High, Medium, Slow  
+
+| Speed Setting | Average Error (m) | Standard Deviation (m) |
+|--------------|------------------|------------------------|
+| High         | 0.134            | 0.035                  |
+| Medium       | 0.104            | 0.038                  |
+| Slow         | 0.080            | 0.005                  |
+
+The results reveal a **clear inverse relationship between movement speed and positional accuracy**.
+As speed decreases, precision improves, highlighting an inherent **speed–accuracy trade-off** in robotic motion control.
+
+![Precision vs Speed](assets/images/precision_vs_speed_chart.png)
+*Figure: Euclidean distance to target versus movement speed.*
+
+---
+
+### Summary of Findings
+
+- **Command Accuracy:** 100% across all test cases  
+- **Average Response Latency:** 112.1 ms (real-time capable)  
+- **Precision:** Highest accuracy achieved at lower movement speeds  
+
+These results demonstrate that the system is **responsive, accurate, and well-suited for hands-free robotic control**, particularly in scenarios where reliability and safety are critical.
+
 
 ---
 
