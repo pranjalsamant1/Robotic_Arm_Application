@@ -120,7 +120,7 @@ The voice-controlled robotic arm demonstrated **100% command execution accuracy*
 
 This indicates a **robust and reliable voice-command interface**, capable of consistently translating spoken commands into correct robotic actions under simulated conditions.
 
-![Command Accuracy – Test Sequences](assets/images/command_accuracy_exel.png)
+![Command Accuracy – Test Sequences](assets/images/command_accuracy_chart.png)
 *Figure: Command accuracy across multiple test sequences (100% success rate).*
 
 ---
