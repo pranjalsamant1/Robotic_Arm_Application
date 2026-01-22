@@ -2,7 +2,7 @@
 ▶️ [Watch the robotic arm demo](Project_Files/Video/robotcontrolapp_workingvideo.mp4)
 
 # Robotic Arm Application: Voice-Controlled AR Interface
-![](assets/images/live_test.jpg)
+![Live Trial](assets/images/live_test.jpg)
 ![System overview](assets/images/RW_headset_operator_both.png)
 
 ## Overview
